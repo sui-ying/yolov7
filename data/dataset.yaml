@@ -1,0 +1,46 @@
+# PASCAL VOC dataset http://host.robots.ox.ac.uk/pascal/VOC/
+# Train command: python train.py --data voc.yaml
+# Default dataset location is next to /yolov5:
+#   /parent_folder
+#     /VOC
+#     /yolov5
+
+
+
+# train and val data as 1) directory: path/images/, 2) file: path/images.txt, or 3) list: [path1/images/, path2/images/]
+#train: /mnt/Gu/trainData/Detect/plate_detect/train_detect
+#val: /mnt/Gu/trainData/Detect/plate_detect/val_detect
+#val: /ssd_1t/derron/yolov5-face/data/widerface/train/  # 4952 images
+#train: /cv/all_training_data/plate/cn/yolov7_plate/detect_plate_datasets/train_data
+#val: /cv/all_training_data/plate/cn/yolov7_plate/detect_plate_datasets/val_detect
+
+#train: /cv/all_training_data/plate/cn/yolov7_plate/dataset/dataset/train
+#val: /cv/all_training_data/plate/cn/yolov7_plate/dataset/dataset/val
+
+# img directory lst: more dataset
+train: ["/cv/all_training_data/plate/cn/yolov7_plate/dataset/dataset/train",
+        "/cv/all_training_data/plate/cn/yolov7_plate/train_data/blue/dataset/train",
+        "/cv/all_training_data/plate/cn/yolov7_plate/train_data/CCPD/dataset/train",
+        "/cv/all_training_data/plate/cn/yolov7_plate/train_data/CRPD_TRAIN/dataset/train",
+        "/cv/all_training_data/plate/cn/yolov7_plate/train_data/double_val/dataset/train",
+        "/cv/all_training_data/plate/cn/yolov7_plate/train_data/green/dataset/train",
+        "/cv/all_training_data/plate/cn/yolov7_plate/train_data/parking/dataset/train",
+        "/cv/all_training_data/plate/cn/yolov7_plate/train_data/shandouble/dataset/train",
+        "/cv/all_training_data/plate/cn/yolov7_plate/train_data/single_yellow_val/dataset/train"
+        ]
+val: ["/cv/all_training_data/plate/cn/yolov7_plate/dataset/dataset/val",
+      "/cv/all_training_data/plate/cn/yolov7_plate/train_data/blue/dataset/val",
+      "/cv/all_training_data/plate/cn/yolov7_plate/train_data/CCPD/dataset/val",
+      "/cv/all_training_data/plate/cn/yolov7_plate/train_data/CRPD_TRAIN/dataset/val",
+      "/cv/all_training_data/plate/cn/yolov7_plate/train_data/double_val/dataset/val",
+      "/cv/all_training_data/plate/cn/yolov7_plate/train_data/green/dataset/val",
+      "/cv/all_training_data/plate/cn/yolov7_plate/train_data/parking/dataset/val",
+      "/cv/all_training_data/plate/cn/yolov7_plate/train_data/shandouble/dataset/val",
+      "/cv/all_training_data/plate/cn/yolov7_plate/train_data/single_yellow_val/dataset/val"
+     ]
+
+# number of classes
+nc: 2           #单层车牌  # 双层车牌
+
+# class names
+names: [ 'single','double']
